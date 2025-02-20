@@ -1,4 +1,6 @@
 import mongoose from 'mongoose';
+import Category from './Category.js';
+import User from './User.js';
 
 const transactionSchema = new mongoose.Schema(
   {
@@ -11,14 +13,9 @@ const transactionSchema = new mongoose.Schema(
       type: Date,
       default: Date.now,
     },
-    type: {
-      type: String,
-      required: true,
-      enum: ['income', 'expense'],
-    },
     category: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Category',
+      ref: Category,
       required: true,
     },
     description: {
@@ -28,18 +25,11 @@ const transactionSchema = new mongoose.Schema(
     },
     user: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
+      ref: User,
       required: true,
-    },
-    recurring: {
-      type: Boolean,
-      default: false,
     },
   },
   { timestamps: true }
 );
-
-transactionSchema.index({ user: 1, date: -1 });
-transactionSchema.index({ user: 1, type: 1 });
 
 export default mongoose.model('Transaction', transactionSchema);

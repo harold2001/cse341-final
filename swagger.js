@@ -14,16 +14,24 @@ const doc = {
       description: 'Root endpoint',
     },
     {
+      name: 'Auth',
+      description: 'Endpoints for managing authentication',
+    },
+    {
       name: 'Users',
       description: 'Endpoints for managing users',
     },
     {
-      name: 'Transactions',
-      description: 'Endpoints for managing transactions',
+      name: 'Types',
+      description: 'Endpoints for managing types of transactions',
     },
     {
       name: 'Categories',
       description: 'Endpoints for managing categories',
+    },
+    {
+      name: 'Transactions',
+      description: 'Endpoints for managing transactions',
     },
     {
       name: 'Reports',

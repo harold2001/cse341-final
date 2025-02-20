@@ -59,6 +59,18 @@ class UserController {
         .json({ message: 'Error deleting user', error: error.message });
     }
   }
+
+  async getCurrentUser(req, res) {
+    /* #swagger.tags = ['Users'] */
+    try {
+      const user = await User.findById(req.user?.id).select('-refreshToken');
+      res.status(200).json(user);
+    } catch (error) {
+      res
+        .status(500)
+        .json({ message: 'Error retrieving user', error: error.message });
+    }
+  }
 }
 
 export default new UserController();
