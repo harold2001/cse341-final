@@ -1,10 +1,10 @@
 import { Router } from 'express';
 import UserController from '../controllers/user.controller.js';
-import {
-  validateUpdateUser,
-  validateIdParam,
-} from '../helpers/validators/user.validator.js';
 import { handleValidationErrors } from '../middlewares/middleware.js';
+import {
+  validateIdParam,
+  validateUpdateUser,
+} from '../validators/user.validator.js';
 
 const router = Router();
 

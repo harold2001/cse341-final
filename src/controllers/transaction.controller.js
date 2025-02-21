@@ -1,8 +1,7 @@
 import Category from '../models/Category.js';
 import Transaction from '../models/Transaction.js';
-import User from '../models/User.js';
 
-class UserController {
+class TransactionController {
   async getMyTransactions(req, res) {
     /* #swagger.tags = ['Transactions'] */
     try {
@@ -120,4 +119,4 @@ class UserController {
   }
 }
 
-export default new UserController();
+export default new TransactionController();
