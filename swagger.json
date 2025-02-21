@@ -714,8 +714,11 @@
         }
       }
     },
-    "/reports/": {
+    "/reports/monthly": {
       "get": {
+        "tags": [
+          "Reports"
+        ],
         "description": "",
         "responses": {
           "200": {
@@ -726,6 +729,53 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/reports/yearly": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/reports/categories": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }

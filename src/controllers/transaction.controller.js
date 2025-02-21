@@ -108,7 +108,7 @@ class UserController {
         return res.status(404).json({ message: 'Transaction not found' });
       }
 
-      await transaction.remove();
+      await transaction.deleteOne();
 
       res.status(200).json({ message: 'Transaction deleted successfully' });
     } catch (error) {

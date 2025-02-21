@@ -1,5 +1,5 @@
 import Type from '../models/Type.js';
-import { ALLOWED_TYPES } from '../helpers/helpers.js';
+import { ALLOWED_TYPES } from '../helpers/constants.js';
 
 class TypeController {
   async getTypes(req, res) {

@@ -1,4 +1,4 @@
-import { ALLOWED_TYPES } from '../helpers/helpers.js';
+import { ALLOWED_TYPES } from '../helpers/constants.js';
 import Type from '../models/Type.js';
 
 export const isTypeAllowed = async (req, res, next) => {
