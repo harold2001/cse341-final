@@ -1,6 +1,6 @@
 import User from '../models/User.js';
 
-class UserController {
+class AuthController {
   async login(req, res) {
     /* #swagger.tags = ['Auth'] */
     console.log(req);
@@ -48,4 +48,4 @@ class UserController {
   }
 }
 
-export default new UserController();
+export default new AuthController();
